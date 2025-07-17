@@ -1,0 +1,9 @@
+replicaCount: 2
+image:
+  repository: docker.io/thanasak2003/springboot-k8s-demo
+  tag: dev
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 8080

@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: api1-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Thanasak-Songsri/gitops-repo
+    targetRevision: HEAD
+    path: helm-charts/backend-chart
+    helm:
+      valueFiles:
+        - ../../environments/dev/api1/app.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: api1-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

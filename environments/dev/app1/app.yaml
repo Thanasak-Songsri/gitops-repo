@@ -1,0 +1,9 @@
+replicaCount: 2
+image:
+  repository: docker.io/thanasak2003/react-devops
+  tag: dev
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
