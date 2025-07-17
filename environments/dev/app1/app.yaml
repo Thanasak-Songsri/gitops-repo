@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
   repository: docker.io/thanasak2003/react-devops
-  tag: dev
+  tag: v1.0.103
   pullPolicy: Always
 
 service:
