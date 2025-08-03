@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: docker.io/thanasak2003/springboot-k8s-demo
-  tag: latest
+  tag: "43"
   pullPolicy: IfNotPresent
 
 service:
